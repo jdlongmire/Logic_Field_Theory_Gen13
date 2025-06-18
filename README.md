@@ -23,7 +23,7 @@ These predictions are falsifiable with current quantum computing platforms.
 ## 📄 Included Artifacts
 
 ### 🔬 Manuscript
-- `Logic_Field_Theory_Gen13.pdf` — Full academic paper outlining theory, derivation, predictions, and experiment plan.
+[📄 Logic Field Theory: Temporal Collapse Dynamics from Logical Strain (PDF)](https://github.com/jdlongmire/Logic_Field_Theory_Gen13/blob/main/Logic_Field_Theory_Gen13.pdf) — Full academic paper outlining theory, derivation, predictions, and experiment plan.
 
 ### 🧪 Jupyter Notebooks (Simulations)
 - `LFTG13_Stage5_Collapse_Simulation_Complete.ipynb`
