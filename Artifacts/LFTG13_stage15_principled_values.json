@@ -1,0 +1,37 @@
+[
+    {
+        "Quantum State": "bell",
+        "v_I": 0.5,
+        "v_N": 0.5,
+        "v_E": 0.0,
+        "D(\u03c8)": 1.0
+    },
+    {
+        "Quantum State": "ghz",
+        "v_I": 0.67,
+        "v_N": 1.0,
+        "v_E": 0.0,
+        "D(\u03c8)": 1.67
+    },
+    {
+        "Quantum State": "cluster",
+        "v_I": 0.44,
+        "v_N": 0.6,
+        "v_E": 0.0,
+        "D(\u03c8)": 1.04
+    },
+    {
+        "Quantum State": "w",
+        "v_I": 0.5,
+        "v_N": 0.33,
+        "v_E": 0.0,
+        "D(\u03c8)": 0.83
+    },
+    {
+        "Quantum State": "5qubit",
+        "v_I": 1.0,
+        "v_N": 1.0,
+        "v_E": 0.0,
+        "D(\u03c8)": 2.0
+    }
+]

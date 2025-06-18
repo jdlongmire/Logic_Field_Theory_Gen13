@@ -1,0 +1,39 @@
+{
+    "postulates": {
+        "5": {
+            "description": "Full LFT Collapse Probability Rule",
+            "formula": "P_LFT(s_j | \u03c8) = \u03a0_collapse(\u03c8) * exp(-\u03b2 * D(\u03c8)) * [ (|c_j|\u00b2 * exp(-\u03b2 * D(s_j))) / \u03a3_k (|c_k|\u00b2 * exp(-\u03b2 * D(s_k))) ]",
+            "components": {
+                "P_LFT(s_j | \u03c8)": "Probability that state \u03c8 collapses to outcome s_j under LFT",
+                "\u03a0_collapse(\u03c8)": "Collapse permission function (1 if exp(-\u03b2 * D(\u03c8)) \u2265 \u03b5, 0 otherwise)",
+                "exp(-\u03b2 * D(\u03c8))": "Realizability of state \u03c8",
+                "|c_j|\u00b2": "Born rule coefficient for outcome s_j",
+                "exp(-\u03b2 * D(s_j))": "Strain-based weighting of outcome s_j",
+                "\u03b2": "Logical inverse temperature (system- or context-dependent)",
+                "D(\u03c8), D(s_j)": "Total logical strain of \u03c8 and outcome s_j"
+            }
+        },
+        "6": {
+            "description": "Collapse Threshold Rule",
+            "formula": "\u03a0_collapse(\u03c8) = 1 if exp(-\u03b2 * D(\u03c8)) \u2265 \u03b5, else 0",
+            "parameters": {
+                "\u03b5": "System-defined realizability threshold (0 < \u03b5 < 1)"
+            },
+            "implication": "If \u03a0_collapse(\u03c8) = 0, then P_LFT(s_j | \u03c8) = 0 \u2200 s_j, and P_null(\u03c8) = 1"
+        }
+    },
+    "derived_quantities": {
+        "P_collapse_event(\u03c8)": {
+            "description": "Probability that a collapse event occurs for state \u03c8",
+            "formula": "exp(-\u03b2 * D(\u03c8))"
+        },
+        "P_null(\u03c8)": {
+            "description": "Probability that no outcome is realized from \u03c8",
+            "formula": "1 - \u03a3_j P_LFT(s_j | \u03c8)",
+            "cases": {
+                "if \u03a0_collapse(\u03c8) = 1": "P_null(\u03c8) = 1 - exp(-\u03b2 * D(\u03c8))",
+                "if \u03a0_collapse(\u03c8) = 0": "P_null(\u03c8) = 1"
+            }
+        }
+    }
+}

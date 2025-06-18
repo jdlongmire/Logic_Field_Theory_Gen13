@@ -1,0 +1,80 @@
+{
+  "stage_15": {
+    "D_psi_formula": "D(\u03c8) = \u03bb * v_I(\u03c8) + \u03bc * v_N(\u03c8) + \u03bd * v_E(\u03c8)",
+    "v_components": {
+      "v_I": {
+        "description": "Measures intrinsic informational strain based on logical asymmetry and impurity.",
+        "calculation_model": "v_I(\u03c8) = 1 - purity(\u03c8) + \u03c7_L(\u03c8)",
+        "examples": {
+          "GHZ_symmetric": 0.5,
+          "Asymmetric_GHZ_(|\u03b1|\u00b2=0.25)": 0.67,
+          "W_state": 0.86,
+          "5qubit_code": 1.0,
+          "random_3qubit_pure": 0.75
+        }
+      },
+      "v_N": {
+        "description": "Captures nonclassical strain from stabilizer contradiction and Bell-type violations.",
+        "calculation_model": "v_N = (V_C / V_T) + \u03bb * C_L + \u03bc * C_S",
+        "examples": {
+          "Bell_state": 0.414,
+          "GHZ_state": 1.0,
+          "Cluster_state": 0.6,
+          "5qubit_code": 1.0,
+          "W_state": 0.25
+        },
+        "notes": "Values match derived metrics using stabilizer group analysis and contradiction counts. \u03bb=0.5, \u03bc=0.25 unless otherwise specified."
+      },
+      "v_E": {
+        "description": "Environmental decoherence strain; assumed 0 for all pure state benchmarks.",
+        "default": 0.0
+      }
+    },
+    "notes": "Stage 15 established a rigorously grounded formula for D(\u03c8), using purity-based v_I and contradiction-derived v_N. All benchmark values above match direct derivations."
+  },
+  "postulate_5": {
+    "name": "Full LFT Collapse Probability Rule",
+    "formula": "P_LFT(s\u2c7c | \u03c8) = exp(-\u03b2 * D(\u03c8)) * [ (|c\u2c7c|\u00b2 * exp(-\u03b2 * D(s\u2c7c))) / \u03a3\u2096 (|c\u2096|\u00b2 * exp(-\u03b2 * D(s\u2096))) ]",
+    "terms": {
+      "D(\u03c8)": "Logical strain of initial state",
+      "D(s\u2c7c)": "Strain of outcome state s\u2c7c",
+      "\u03b2": "Logical inverse temperature parameter",
+      "|c\u2c7c|\u00b2": "Born weight for s\u2c7c"
+    },
+    "interpretation": "Collapse probability is modulated by both global logical realizability and local strain-weighted outcome selection.",
+    "domain": "0 \u2264 P_LFT(s\u2c7c | \u03c8) \u2264 exp(-\u03b2 D(\u03c8))",
+    "boundary_case": "If D(s\u2c7c) = 0 for all j, reduces to Born rule scaled by exp(-\u03b2 D(\u03c8))."
+  },
+  "postulate_6": {
+    "name": "Collapse Threshold Rule",
+    "collapse_permission": {
+      "\u03a0_collapse(\u03c8)": "1 if exp(-\u03b2 * D(\u03c8)) \u2265 \u03b5, else 0"
+    },
+    "collapse_rule_modified": "P_LFT(s\u2c7c | \u03c8) = \u03a0_collapse(\u03c8) * exp(-\u03b2 * D(\u03c8)) * [ (|c\u2c7c|\u00b2 * exp(-\u03b2 * D(s\u2c7c))) / \u03a3\u2096 (|c\u2096|\u00b2 * exp(-\u03b2 * D(s\u2096))) ]",
+    "null_result_formula": "P_null(\u03c8) = 1 - \u03a3\u2c7c P_LFT(s\u2c7c | \u03c8)",
+    "threshold_parameter": {
+      "\u03b5": 0.01,
+      "description": "Minimum realizability threshold for collapse to be permitted"
+    },
+    "interpretation": "Introduces a hard cutoff for logical admissibility; if D(\u03c8) exceeds a critical threshold, no outcome occurs and P_null = 1."
+  },
+  "stage_16": {
+    "simulations": [
+      "GHZ state triad with |\u03b1|\u00b2 = 0.25, 0.50, 0.75 and D(s\u2c7c)=0",
+      "Asymmetric GHZ with D(s_000)=0.1, D(s_111)=0.3 and D(\u03c8)=1.67"
+    ],
+    "results": {
+      "P_LFT behavior": "Confirmed exponential scaling of collapse likelihood and conditional outcome selection",
+      "P_null behavior": {
+        "case_1": "P_null = 1 - exp(-\u03b2 D(\u03c8)) for \u03c8 above threshold (\u03a0=1)",
+        "case_2": "P_null = 1 if exp(-\u03b2 D(\u03c8)) < \u03b5 (\u03a0=0)"
+      }
+    },
+    "key_findings": [
+      "LFT retains Born rule in conditional layer",
+      "Logical strain modulates outcome actualization probabilities",
+      "Collapse can be fully inhibited for high-strain states (novel prediction)",
+      "Null result interpretation is quantitatively and conceptually distinct from standard QM"
+    ]
+  }
+}

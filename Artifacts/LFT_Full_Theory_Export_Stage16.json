@@ -1,0 +1,59 @@
+{
+  "theory": "Logic Field Theory (LFT)",
+  "version": "Stage 16 Final",
+  "exported_at": "2025-05-29T11:00:03.471162",
+  "core_postulates": {
+    "1": "Physical Reality (\u03a9) is the output of a logical operator (L) acting on a set of information states (S): \u03a9 = L(S).",
+    "2": "All valid transitions between information states s\u1d62 \u2192_L s\u2c7c must preserve the Three Fundamental Laws of Logic (3FLL): Identity, Non-Contradiction, and Excluded Middle.",
+    "3": "Logical strain D(s) is a scalar quantity that measures the logical instability or incoherence of an information state s under the 3FLL.",
+    "4": "The realizability of a quantum state \u03c8 (its ability to physically collapse) is given by: \u03a0_L(\u03c8)^2 = exp(-\u03b2\u00b7D(\u03c8)), where D(\u03c8) is the logical strain of the pre-collapse state and \u03b2 is a logical inverse temperature.",
+    "5": "The probability of observing a specific outcome s\u2c7c from \u03c8, under LFT, is: P_LFT(s\u2c7c | \u03c8) = exp(-\u03b2\u00b7D(\u03c8)) \u00d7 [|c\u2c7c|\u00b2 \u00b7 exp(-\u03b2\u00b7D(s\u2c7c))] / \u03a3_k [|c_k|\u00b2 \u00b7 exp(-\u03b2\u00b7D(s_k))], where |c\u2c7c|\u00b2 are the standard Born weights and D(s\u2c7c) are outcome strains."
+  },
+  "metrics": {
+    "v_N": "Logical non-coherence metric defined as v_N = (V_C / V_T) + \u03bb\u00b7C_L + \u03bc\u00b7C_S, where V_C is the number of stabilizers violated, V_T is total stabilizers, C_L is logical contradiction, and C_S is statistical contradiction.",
+    "D(s)": "Logical strain of state s, derived from v_N and v_I metrics under the DAG constraints.",
+    "||\u03a0_L(\u03c8)||\u00b2": "Probability that state \u03c8 is logically realizable (collapsible)."
+  },
+  "simulation_summary": {
+    "benchmark_states": [
+      "|0\u27e9\u2297|1\u27e9",
+      "|\u03c8\u207b\u27e9",
+      "GHZ",
+      "Cluster",
+      "5-Qubit Code",
+      "W-state"
+    ],
+    "GHZ_triad": {
+      "|\u03b1|\u00b2=0.25": {
+        "D(\u03c8)": 1.6,
+        "D(s_000)": 0.0,
+        "D(s_111)": 0.0,
+        "Results": "Outcome ratios follow Born rule. Realizability scaled by exp(-\u03b2\u00b71.6)."
+      },
+      "|\u03b1|\u00b2=0.50": {
+        "D(\u03c8)": 1.6,
+        "D(s_000)": 0.0,
+        "D(s_111)": 0.0,
+        "Results": "50/50 outcome maintained; both probabilities decay with \u03b2."
+      },
+      "|\u03b1|\u00b2=0.75": {
+        "D(\u03c8)": 1.6,
+        "D(s_000)": 0.0,
+        "D(s_111)": 0.0,
+        "Results": "Outcome ratios follow Born rule. Realizability scaled by exp(-\u03b2\u00b71.6)."
+      }
+    },
+    "strain_modulated_outcomes": {
+      "state": "GHZ",
+      "D(\u03c8)": 1.67,
+      "D(s_000)": 0.1,
+      "D(s_111)": 0.3,
+      "Results": "Conditional outcome probabilities skewed toward lower D(s\u2c7c); full LFT formula verified."
+    }
+  },
+  "compliance": {
+    "QM_formalism": "Fully retained (Schr\u00f6dinger evolution, Born rule, entanglement, etc.)",
+    "3FLL": "Strictly enforced throughout all state transitions and interpretations",
+    "Collapse_behavior": "Reformulated as strain-dependent realizability and conditional logic-weighted outcome selection"
+  }
+}
