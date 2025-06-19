@@ -1,8 +1,8 @@
 # Logic Field Theory (LFT)
 
 **Author:** JD Longmire  
-**Project Status:** Active | Version: Stage 17 Complete  
-**Paper:** *Logic Field Theory: Temporal Collapse Dynamics from Logical Strain*  
+**Project Status:** Active | Version: 13.0  
+**Papers:** *Links below - please treat all documents as pre-print available for comments and feedback*  
 **Repository Type:** Research Framework & Simulation Suite  
 **License:** MIT
 
