@@ -23,7 +23,9 @@ These predictions are falsifiable with current quantum computing platforms.
 ## 📄 Included Artifacts
 
 ### 🔬 Manuscript
-[📄 Logic Field Theory: Temporal Collapse Dynamics from Logical Strain (PDF)](https://github.com/jdlongmire/Logic_Field_Theory_Gen13/blob/main/Logic_Field_Theory_Gen13.pdf) — Full academic paper outlining theory, derivation, predictions, and experiment plan.
+- [📄 Logic Field Theory: Temporal Collapse Dynamics from Logical Strain (PDF)](https://github.com/jdlongmire/Logic_Field_Theory_Gen13/blob/main/Logic_Field_Theory_Gen13.pdf) — Full academic paper outlining theory, derivation, predictions, and experiment plan.
+- [📄 LFT Introduction and Comparison (PDF)](https://github.com/jdlongmire/Logic_Field_Theory_Gen13/blob/main/LFT_G13_Introduction-Comparison.pdf) — Positioning of LFT against other interpretations; philosophy and competitive landscape.
+- [📄 LFT Supplemental: Refined Collapse Dynamics (PDF)](https://github.com/jdlongmire/Logic_Field_Theory_Gen13/blob/main/LFT_Gen13_Supplimental_1.pdf) — Formal derivation of D(ψ), β-hardware coupling, and null outcome predictions.
 
 ### 🧪 Jupyter Notebooks (Simulations)
 - `LFTG13_Stage5_Collapse_Simulation_Complete.ipynb`
@@ -75,9 +77,9 @@ Target signature: **Exponential decay + null measurement events**
 
 ## 📬 Contact
 
-For questions, contributions, or collaboration:
+For questions, contributions, or collaboration:  
 **JD Longmire**  
-[bitbucket_username or email]
+longmire.jd@gmail.com
 
 ---
 
