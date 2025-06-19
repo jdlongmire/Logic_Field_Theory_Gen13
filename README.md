@@ -4,7 +4,7 @@
 **Project Status:** Active | Version: Stage 17 Complete  
 **Paper:** *Logic Field Theory: Temporal Collapse Dynamics from Logical Strain*  
 **Repository Type:** Research Framework & Simulation Suite  
-**License:** MIT (or specify your own)
+**License:** MIT
 
 ---
 
